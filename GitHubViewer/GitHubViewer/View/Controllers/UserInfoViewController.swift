@@ -17,7 +17,6 @@ class UserInfoViewController: UIViewController {
         customView.collectionView.delegate = self
         customView.collectionView.dataSource = self
         customView.collectionView.register(UserListCollectionViewCell.self, forCellWithReuseIdentifier: cellId)
-
     }
     
     func setInfo(name: User) {
@@ -39,9 +38,10 @@ extension UserInfoViewController: UICollectionViewDelegate, UICollectionViewData
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: view.frame.width - 20 , height: 70)
+        return CGSize(width: view.frame.width - 20 , height: 100)
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
     }
 }
+

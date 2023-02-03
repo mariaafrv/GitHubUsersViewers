@@ -14,6 +14,9 @@ class UserInfoScreenView: BaseView {
     var setUser: User? {
         didSet{
             username.text = setUser?.name
+            if let avatarUrl = setUser?.avatarUrl {
+                gitIcon.downloaded(from: avatarUrl)
+            }
         }
     }
 

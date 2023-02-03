@@ -29,27 +29,18 @@ class SearchViewController: UIViewController {
                 return
             }
             
-            print(user.name, "<<<<<<<<<<<<<<<<<<")
+            print(user, "<<<<<<<<<<<<<<<<<<")
             userInfoViewController.setInfo(name: user)
             
             self.githubApi.getInfo([Repos].self, url: "https://api.github.com/users/\(username)/repos") { repos in
                 guard let repos = repos else {
                     return
                 }
-                
-                
                 userInfoViewController.reposCount = repos
                 
                 self.navigationController?.pushViewController(userInfoViewController, animated: true)
             }
-            
         }
         
-        
-        
-        
-        
     }
-    
-    
 }

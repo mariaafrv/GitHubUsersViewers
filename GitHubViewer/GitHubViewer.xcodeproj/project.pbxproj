@@ -22,6 +22,8 @@
 		4D8295B1298AB12C009E02E9 /* UserListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8295B0298AB12C009E02E9 /* UserListCollectionViewCell.swift */; };
 		4D8295B3298AB16D009E02E9 /* BaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8295B2298AB16D009E02E9 /* BaseCell.swift */; };
 		4D8295B6298D3743009E02E9 /* Repos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8295B5298D3743009E02E9 /* Repos.swift */; };
+		4D8295B8298D6990009E02E9 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8295B7298D6990009E02E9 /* UIImageView+Extension.swift */; };
+		4D8295BA298D82E5009E02E9 /* LanguageLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8295B9298D82E5009E02E9 /* LanguageLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		4D8295B0298AB12C009E02E9 /* UserListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListCollectionViewCell.swift; sourceTree = "<group>"; };
 		4D8295B2298AB16D009E02E9 /* BaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCell.swift; sourceTree = "<group>"; };
 		4D8295B5298D3743009E02E9 /* Repos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repos.swift; sourceTree = "<group>"; };
+		4D8295B7298D6990009E02E9 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		4D8295B9298D82E5009E02E9 /* LanguageLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +94,7 @@
 		4D82959B298A9D24009E02E9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4D8295B9298D82E5009E02E9 /* LanguageLabel.swift */,
 				4D8295A5298A9EE6009E02E9 /* SearchScreenView.swift */,
 				4D8295A7298AA675009E02E9 /* UserInfoScreenView.swift */,
 				4D8295B0298AB12C009E02E9 /* UserListCollectionViewCell.swift */,
@@ -139,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				4D8295A1298A9DEC009E02E9 /* UIView+Extension.swift */,
+				4D8295B7298D6990009E02E9 /* UIImageView+Extension.swift */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -230,9 +236,11 @@
 			files = (
 				4D8295A4298A9DFA009E02E9 /* BaseView.swift in Sources */,
 				4D82958C298A9A9A009E02E9 /* SearchViewController.swift in Sources */,
+				4D8295B8298D6990009E02E9 /* UIImageView+Extension.swift in Sources */,
 				4D8295AB298AA771009E02E9 /* GetApi.swift in Sources */,
 				4D829588298A9A9A009E02E9 /* AppDelegate.swift in Sources */,
 				4D8295B3298AB16D009E02E9 /* BaseCell.swift in Sources */,
+				4D8295BA298D82E5009E02E9 /* LanguageLabel.swift in Sources */,
 				4D8295AD298AA9F3009E02E9 /* UserInfoViewController.swift in Sources */,
 				4D8295A2298A9DEC009E02E9 /* UIView+Extension.swift in Sources */,
 				4D8295A6298A9EE6009E02E9 /* SearchScreenView.swift in Sources */,
