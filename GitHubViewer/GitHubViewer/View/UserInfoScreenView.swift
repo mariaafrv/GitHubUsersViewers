@@ -10,6 +10,12 @@ import UIKit
 class UserInfoScreenView: BaseView {
     
     let cellId = "cellId"
+    
+    var setUser: User? {
+        didSet{
+            username.text = setUser?.name
+        }
+    }
 
     lazy var gitIcon: UIImageView = {
         let gitIcon = UIImageView()
@@ -19,7 +25,9 @@ class UserInfoScreenView: BaseView {
     
     lazy var username: UILabel = {
         let username = UILabel()
-        username.text = ""
+        username.text = "aaaa"
+        username.numberOfLines = 0
+        username.textAlignment = .center
         return username
     }()
     
@@ -52,8 +60,8 @@ class UserInfoScreenView: BaseView {
             leading: nil,
             bottom: nil,
             trailing: nil,
-            padding: .init(top: 20, left: 0, bottom: 0, right: 0),
-            size: .init(width: 150, height: 30))
+            padding: .init(top: 0, left: 0, bottom: 0, right: 0),
+            size: .init(width: 150, height: 60))
         
         username.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
         

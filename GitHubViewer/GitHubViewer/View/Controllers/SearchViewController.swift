@@ -1,16 +1,14 @@
 //
 //  ViewController.swift
 //  GitHubViewer
-//
-//  Created by unicred on 01/02/23.
-//
-
 import UIKit
 
 class SearchViewController: UIViewController {
-
+    
     let customView = SearchScreenView()
     let githubApi = GetApi()
+    
+    var listRepos: [Repos] = []
     
     override func loadView() {
         let view = customView
@@ -24,14 +22,34 @@ class SearchViewController: UIViewController {
     
     @objc func searchUser(){
         let userInfoViewController = UserInfoViewController()
-        githubApi.getUser(username: customView.searchTextField.text ?? "", completion: { user in
-            if let user = user {
-                print(">>>>>>>>>>>>>>>>>", user.name)
-            }
-        })
+        let username = customView.searchTextField.text ?? ""
         
-        navigationController?.pushViewController(userInfoViewController, animated: true)
+        githubApi.getInfo(User.self, url: "https://api.github.com/users/\(username)") { user in
+            guard let user = user else {
+                return
+            }
+            
+            print(user.name, "<<<<<<<<<<<<<<<<<<")
+            userInfoViewController.setInfo(name: user)
+            
+            self.githubApi.getInfo([Repos].self, url: "https://api.github.com/users/\(username)/repos") { repos in
+                guard let repos = repos else {
+                    return
+                }
+                
+                
+                userInfoViewController.reposCount = repos
+                
+                self.navigationController?.pushViewController(userInfoViewController, animated: true)
+            }
+            
         }
+        
+        
+        
+        
+        
+    }
     
-
+    
 }

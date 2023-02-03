@@ -21,6 +21,7 @@
 		4D8295AF298AAD29009E02E9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8295AE298AAD29009E02E9 /* User.swift */; };
 		4D8295B1298AB12C009E02E9 /* UserListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8295B0298AB12C009E02E9 /* UserListCollectionViewCell.swift */; };
 		4D8295B3298AB16D009E02E9 /* BaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8295B2298AB16D009E02E9 /* BaseCell.swift */; };
+		4D8295B6298D3743009E02E9 /* Repos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8295B5298D3743009E02E9 /* Repos.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		4D8295AE298AAD29009E02E9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		4D8295B0298AB12C009E02E9 /* UserListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListCollectionViewCell.swift; sourceTree = "<group>"; };
 		4D8295B2298AB16D009E02E9 /* BaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCell.swift; sourceTree = "<group>"; };
+		4D8295B5298D3743009E02E9 /* Repos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repos.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				4D8295AE298AAD29009E02E9 /* User.swift */,
+				4D8295B5298D3743009E02E9 /* Repos.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 				4D8295A6298A9EE6009E02E9 /* SearchScreenView.swift in Sources */,
 				4D8295A8298AA675009E02E9 /* UserInfoScreenView.swift in Sources */,
 				4D8295B1298AB12C009E02E9 /* UserListCollectionViewCell.swift in Sources */,
+				4D8295B6298D3743009E02E9 /* Repos.swift in Sources */,
 				4D8295AF298AAD29009E02E9 /* User.swift in Sources */,
 				4D82958A298A9A9A009E02E9 /* SceneDelegate.swift in Sources */,
 			);

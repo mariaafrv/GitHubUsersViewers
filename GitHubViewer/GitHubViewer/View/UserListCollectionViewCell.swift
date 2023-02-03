@@ -2,6 +2,12 @@ import UIKit
 
 class UserListCollectionViewCell: BaseCell {
 
+    var listRepos: Repos?{
+        didSet {
+            name.text = listRepos?.name
+        }
+    }
+    
     lazy var cell: UICollectionViewCell = {
         let cell = UICollectionViewCell()
         cell.layer.borderWidth = 1
@@ -37,8 +43,10 @@ class UserListCollectionViewCell: BaseCell {
             leading: cell.leadingAnchor,
             bottom: nil,
             trailing: nil,
-            padding: .init(top: 5, left: 10, bottom: 0, right: 0),
-            size: .init(width: 150, height: 30))
+            padding: .init(top: 10, left: 10, bottom: 0, right: 0),
+            size: .init(width: 200, height: 30))
+        
+        
     }
     
 }

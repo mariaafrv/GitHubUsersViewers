@@ -3,41 +3,42 @@ import Foundation
 
 class GetApi {
     
-    func getUser(username: String, completion: @escaping (User?) -> Void) {
-        let semaphore = DispatchSemaphore (value: 0)
-        
-        var request = URLRequest(url: URL(string: "https://api.github.com/users/\(username)")!,timeoutInterval: Double.infinity)
-        request.httpMethod = "GET"
-        
-        let task = URLSession.shared.dataTask(with: request) { data, response, error in
-            guard let data = data else {
-                print(String(describing: error))
-                completion(nil)
-                semaphore.signal()
+    func getInfo<T>(_ value: T.Type, url: String, completion: @escaping (T?) -> Void) where T: Decodable {
+
+            guard let baseUrl = URL(string: url) else {
                 return
             }
-            
-            let decoder = JSONDecoder()
-            
-            decoder.keyDecodingStrategy = .convertFromSnakeCase
-            
-            do {
-                let user = try decoder.decode(User.self, from: data)
-                completion(user)
-            } catch {
-                completion(nil)
+            var request = URLRequest(url: baseUrl)
+            request.httpMethod = "GET"
+
+            let task = URLSession.shared.dataTask(with: request) { data, response, error in
+                let response = response as! HTTPURLResponse
+
+                if response.statusCode < 400 {
+
+                    if let data = data {
+                        let jsonDecoder = JSONDecoder()
+                        jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
+
+                        let json = try? jsonDecoder.decode(T.self, from: data)
+                        DispatchQueue.main.async {
+                            completion(json)
+                        }
+                    } else {
+                        completion(nil)
+                    }
+                } else {
+                    completion(nil)
+                }
+
             }
-            
-            let resp = response as? HTTPURLResponse
-            print(resp?.statusCode as Any)
-            
-            print(String(data: data, encoding: .utf8)!, "FUNCIONA")
-            semaphore.signal()
-        }
         task.resume()
-        semaphore.wait()
+        }
+
     }
-}
+    
+
+    
 
 
- 
+
