@@ -27,9 +27,12 @@ class UserListCollectionViewCell: BaseCell {
     
     lazy var tagLanguage: UILabel = {
         let tagLanguage = LanguageLabel(withInsets: 3, 3, 8, 8)
+        tagLanguage.backgroundColor = .black
         tagLanguage.font = .systemFont(ofSize: 14)
-        tagLanguage.backgroundColor = .blue
         tagLanguage.textAlignment = .center
+        tagLanguage.textColor = .white
+        tagLanguage.layer.cornerRadius = 4
+        tagLanguage.layer.masksToBounds =  true
         return tagLanguage
     }()
     
