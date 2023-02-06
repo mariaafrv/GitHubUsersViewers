@@ -1,11 +1,11 @@
 import UIKit
 
-class UserInfoViewController: UIViewController {
+class 👤📖🎮: UIViewController {
 
-    let customView = UserInfoScreenView()
+    let customView = 👤📖()
     
     private var cellId = "cellId"
-    var reposCount: [Repos] = []
+    var 🔖🔖❓: [🔖] = []
     
     override func loadView() {
         let view = customView
@@ -16,23 +16,23 @@ class UserInfoViewController: UIViewController {
         super.viewDidLoad()
         customView.collectionView.delegate = self
         customView.collectionView.dataSource = self
-        customView.collectionView.register(UserListCollectionViewCell.self, forCellWithReuseIdentifier: cellId)
+        customView.collectionView.register(👤👤👤👤.self, forCellWithReuseIdentifier: cellId)
     }
     
-    func setInfo(name: User) {
+    func setInfo(name: 👤) {
         customView.setUser = name
     }
     
 }
 
-extension UserInfoViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension 👤📖🎮: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return reposCount.count
+        return 🔖🔖❓.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! UserListCollectionViewCell
-        cell.listRepos = reposCount[indexPath.item]
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! 👤👤👤👤
+        cell.🔖🔖🔖🔖 = 🔖🔖❓[indexPath.item]
         return cell
         
     }

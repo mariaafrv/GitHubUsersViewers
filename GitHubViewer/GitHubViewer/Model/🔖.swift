@@ -1,6 +1,6 @@
 import UIKit
 
-struct Repos: Decodable {
+struct 🔖: Decodable {
     var name: String
  var language: String?
 }

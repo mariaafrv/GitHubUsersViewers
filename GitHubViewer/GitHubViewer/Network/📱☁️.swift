@@ -1,7 +1,7 @@
 import Foundation
 
 
-class GetApi {
+class 📱☁️ {
     
     func getInfo<T>(_ value: T.Type, url: String, completion: @escaping (T?) -> Void) where T: Decodable {
         

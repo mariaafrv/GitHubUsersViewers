@@ -7,15 +7,15 @@
 
 import UIKit
 
-class SearchScreenView: BaseView {
+class 🔎📱: BaseView {
 
-    lazy var gitIcon: UIImageView = {
+    lazy var 📷: UIImageView = {
         let gitIcon = UIImageView()
         gitIcon.image = UIImage(named: "githubicon")
         return gitIcon
     }()
     
-    lazy var searchTextField: UITextField = {
+    lazy var 🔎: UITextField = {
         let searchTextField = UITextField()
         searchTextField.placeholder = "GitHub username"
         searchTextField.autocapitalizationType = .none
@@ -37,13 +37,13 @@ class SearchScreenView: BaseView {
     }()
     
     override func addSubview() {
-        addSubview(gitIcon)
-        addSubview(searchTextField)
+        addSubview(📷)
+        addSubview(🔎)
         addSubview(searchButton)
     }
     
     override func setConstraints() {
-        gitIcon.anchor(
+        📷.anchor(
             top: safeAreaLayoutGuide.topAnchor,
             leading: nil,
             bottom: nil,
@@ -51,20 +51,20 @@ class SearchScreenView: BaseView {
             padding: .init(top: 30, left: 0, bottom: 0, right: 0),
             size: .init(width: 200, height: 200))
         
-        gitIcon.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+        📷.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
         
-        searchTextField.anchor(
-            top: gitIcon.bottomAnchor,
+        🔎.anchor(
+            top: 📷.bottomAnchor,
             leading: nil,
             bottom: nil,
             trailing: nil,
             padding: .init(top: 40, left: 0, bottom: 0, right: 0),
             size: .init(width: 360, height: 60))
         
-        searchTextField.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+        🔎.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
         
         searchButton.anchor(
-            top: searchTextField.bottomAnchor,
+            top: 🔎.bottomAnchor,
             leading: nil,
             bottom: nil,
             trailing: nil,

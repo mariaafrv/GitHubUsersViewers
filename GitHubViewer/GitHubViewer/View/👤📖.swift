@@ -7,20 +7,20 @@
 
 import UIKit
 
-class UserInfoScreenView: BaseView {
+class 👤📖: BaseView {
     
     let cellId = "cellId"
     
-    var setUser: User? {
+    var setUser: 👤? {
         didSet{
             username.text = setUser?.name
             if let avatarUrl = setUser?.avatarUrl {
-                gitIcon.downloaded(from: avatarUrl)
+                📷.downloaded(from: avatarUrl)
             }
         }
     }
 
-    lazy var gitIcon: UIImageView = {
+    lazy var 📷: UIImageView = {
         let gitIcon = UIImageView()
         gitIcon.image = UIImage(named: "githubicon")
         return gitIcon
@@ -42,13 +42,13 @@ class UserInfoScreenView: BaseView {
     }()
 
     override func addSubview() {
-        addSubview(gitIcon)
+        addSubview(📷)
         addSubview(username)
         addSubview(collectionView)
     }
 
     override func setConstraints() {
-        gitIcon.anchor(
+        📷.anchor(
             top: safeAreaLayoutGuide.topAnchor,
             leading: nil,
             bottom: nil,
@@ -56,10 +56,10 @@ class UserInfoScreenView: BaseView {
             padding: .init(top: 30, left: 0, bottom: 0, right: 0),
             size: .init(width: 200, height: 200))
         
-        gitIcon.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+        📷.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
         
         username.anchor(
-            top: gitIcon.bottomAnchor,
+            top: 📷.bottomAnchor,
             leading: nil,
             bottom: nil,
             trailing: nil,

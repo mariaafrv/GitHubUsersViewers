@@ -3,12 +3,12 @@
 //  GitHubViewer
 import UIKit
 
-class SearchViewController: UIViewController {
+class 🔎🎮: UIViewController {
     
-    let customView = SearchScreenView()
+    let customView = 🔎📱()
     let githubApi = GetApi()
     
-    var listRepos: [Repos] = []
+    var 🔖🔖🔖🔖: [🔖] = []
     
     override func loadView() {
         let view = customView
@@ -21,10 +21,10 @@ class SearchViewController: UIViewController {
     }
     
     @objc func searchUser(){
-        let userInfoViewController = UserInfoViewController()
-        let username = customView.searchTextField.text ?? ""
+        let userInfoViewController = 👤📖🎮()
+        let username = customView.🔎.text ?? ""
         
-        githubApi.getInfo(User.self, url: "https://api.github.com/users/\(username)") { user in
+        githubApi.getInfo(👤.self, url: "https://api.github.com/users/\(username)") { user in
             guard let user = user else {
                 return
             }
@@ -32,7 +32,7 @@ class SearchViewController: UIViewController {
             print(user, "<<<<<<<<<<<<<<<<<<")
             userInfoViewController.setInfo(name: user)
             
-            self.githubApi.getInfo([Repos].self, url: "https://api.github.com/users/\(username)/repos") { repos in
+            self.githubApi.getInfo([🔖].self, url: "https://api.github.com/users/\(username)/repos") { repos in
                 guard let repos = repos else {
                     return
                 }

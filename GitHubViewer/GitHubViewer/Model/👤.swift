@@ -1,6 +1,6 @@
 import UIKit
 
-struct User: Decodable {
+struct 👤: Decodable {
     var name: String
     var avatarUrl: String?
     

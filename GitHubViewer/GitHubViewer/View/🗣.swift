@@ -4,7 +4,7 @@
 
 import UIKit
 
-class LanguageLabel: UILabel {
+class 🗣: UILabel {
 
     var topInset: CGFloat
     var bottomInset: CGFloat

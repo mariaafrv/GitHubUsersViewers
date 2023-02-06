@@ -1,11 +1,11 @@
 import UIKit
 
-class UserListCollectionViewCell: BaseCell {
+class 👤👤👤👤: BaseCell {
 
-    var listRepos: Repos?{
+    var 🔖🔖🔖🔖: 🔖?{
         didSet {
-            name.text = listRepos?.name
-            tagLanguage.text = listRepos?.language
+            name.text = 🔖🔖🔖🔖?.name
+            📍🗣.text = 🔖🔖🔖🔖?.language
         }
     }
     
@@ -25,8 +25,8 @@ class UserListCollectionViewCell: BaseCell {
         return name
     }()
     
-    lazy var tagLanguage: UILabel = {
-        let tagLanguage = LanguageLabel(withInsets: 3, 3, 8, 8)
+    lazy var 📍🗣: UILabel = {
+        let tagLanguage = 🗣(withInsets: 3, 3, 8, 8)
         tagLanguage.font = .systemFont(ofSize: 14)
         tagLanguage.backgroundColor = .blue
         tagLanguage.textAlignment = .center
@@ -37,7 +37,7 @@ class UserListCollectionViewCell: BaseCell {
     override func addSubviews() {
         addSubview(cell)
         cell.addSubview(name)
-        cell.addSubview(tagLanguage)
+        cell.addSubview(📍🗣)
     }
     
     override func addConstraints() {
@@ -57,7 +57,7 @@ class UserListCollectionViewCell: BaseCell {
             padding: .init(top: 10, left: 10, bottom: 0, right: 0),
             size: .init(width: 200, height: 30))
         
-        tagLanguage.anchor(
+        📍🗣.anchor(
             top: name.bottomAnchor,
             leading: name.leadingAnchor,
             bottom: nil,

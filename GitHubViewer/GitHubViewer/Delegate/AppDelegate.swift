@@ -11,7 +11,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 window?.makeKeyAndVisible()
                 window?.backgroundColor = .white
                 window?.tintColor = .black
-                window?.rootViewController = UINavigationController(rootViewController: SearchViewController())
+                window?.rootViewController = UINavigationController(rootViewController: 🔎🎮())
                 return true
             }
     }
